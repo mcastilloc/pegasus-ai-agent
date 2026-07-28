@@ -14,3 +14,9 @@ Agente de Inteligencia Artificial basado en RAG para responder preguntas sobre d
 ## Estado
 
 🚧 En desarrollo
+
+# Ejemplo 
+
+consulta al agente
+
+[Consulta al Agente](screenshots/Screen-app-pegasus.png)
