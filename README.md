@@ -1,22 +1,56 @@
 # Pegasus AI Agent
 
-Agente de Inteligencia Artificial basado en RAG para responder preguntas sobre documentación corporativa.
+Asistente conversacional RAG desplegado en Oracle Cloud Infrastructure.
+
+## Arquitectura
+
+PDFs
+→ LangChain
+→ Sentence Transformers
+→ FAISS
+→ Gemini
+→ Streamlit
 
 ## Tecnologías
 
-- Python
+- Python 3.12
 - LangChain
+- Google Gemini
 - FAISS
+- Sentence Transformers
+- Hugging Face
 - Streamlit
-- Gemini
 - Oracle Cloud Infrastructure
 
-## Estado
+## Instalación
 
-🚧 En desarrollo
+git clone ...
 
-# Ejemplo 
+cd pegasus-ai-agent
 
-consulta al agente
+./setup.sh
 
-![Consulta al Agente](screenshots/Screen-app-pegasus.png)
+## Variables de entorno .env
+
+GOOGLE_API_KEY=...
+
+## Generación del índice
+
+python index_documents.py
+
+## Ejecución
+
+streamlit run app.py \
+  --server.address 0.0.0.0 \
+  --server.port 8501
+
+## Despliegue OCI
+
+- OCI Compute
+- Ubuntu 24.04
+- VM.Standard.E2.1.Micro
+- Puerto TCP 8501
+
+## Consideraciones
+
+El índice FAISS debe generarse localmente y copiarse a OCI debido a las limitaciones de memoria de la instancia Always Free.
