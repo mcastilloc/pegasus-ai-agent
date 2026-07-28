@@ -19,4 +19,4 @@ Agente de Inteligencia Artificial basado en RAG para responder preguntas sobre d
 
 consulta al agente
 
-[Consulta al Agente](screenshots/Screen-app-pegasus.png)
+![Consulta al Agente](screenshots/Screen-app-pegasus.png)
